@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-function Bookmark3() {
+function BookmarkName({bookmarkName}) {
+    const [name, setName] = useState("Homepage");
+    useEffect(() => {
+        window.onLocationChange = () => {
+            setName(window.location.href.split("/")[3])
+        }
+    }, []);
   return (
     <div>
-      <h1>Bookmark 3</h1>
+      <h1>{bookmarkName}</h1>
     </div>
   );
 }
 
-export default Bookmark3;
+export default BookmarkName;
