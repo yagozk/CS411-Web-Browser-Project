@@ -49,7 +49,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         if (!isBookmarkFound) {
             setIsBookmarked(false)
             setBookmarkName("")
-            setBookmarkFolder("Parent")
+            setBookmarkFolder("")
         }
         
     }, [value]);
@@ -77,7 +77,12 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
 
 
     const handleFolderNameChange = (e, val) => {
+        console.log("hello")
         if (e.target.value) {
+            console.log("hello2")
+            console.log(val)
+            console.log("hello3")
+            console.log(e.target.value)
             setBookmarkFolder(e.target.value)
         }
 
@@ -141,9 +146,11 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
                         console.log("deleting folder")
                         folders.splice(i, 1)
                         setIsBookmarked(false)
+                        setBookmarkName("")
                         break
                     }
                     setIsBookmarked(false)
+                    setBookmarkName("")
                 }
             }
         }

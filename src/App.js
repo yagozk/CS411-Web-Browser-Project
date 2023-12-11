@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import BrowserToolbar from "./BrowserToolbar";
-import BookmarkName from "./Bookmark3";
+import BrowserToolbar from "./components/BrowserToolbar";
+import BookmarkName from "./components/BookmarkName";
 import React, {useState} from "react";
 
 function App() {

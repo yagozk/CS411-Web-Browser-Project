@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import firePenguinImage from "./fire_penguin.png";
+import firePenguinImage from "../fire_penguin.png";
 import {Link, useNavigate} from "react-router-dom";
-import LinkInputField from "./components/LinkInputField";
+import LinkInputField from "./LinkInputField";
 import {TreeView} from '@mui/x-tree-view/TreeView';
 import {TreeItem} from '@mui/x-tree-view/TreeItem';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -24,7 +24,6 @@ const BrowserToolbar = ({onBookmarkClick, setBookmarkName}) => {
     }
 
     const [currentAddress, setCurrentAddress] = useState("http://localhost:3000/");
-    const [pageChange, setPageChange] = useState(0);
     const [isBookmarkPopupShowing, setBookmarkPopupShowing] = useState(false);
 
     const BookmarkPopup = () => {
@@ -60,8 +59,6 @@ const BrowserToolbar = ({onBookmarkClick, setBookmarkName}) => {
             </TreeView>
         </div>)
     }
-
-    const [isOnFolder, setIsOnFolder] = useState("");
 
     return (<nav className="navbar navbar-expand-lg navbar-light bg-dark text-white">
         <div className="container">
