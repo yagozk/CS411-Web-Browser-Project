@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Button from "@mui/material/Button";
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
+import { IoIosSearch } from "react-icons/io";
 
 const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
   const [folders, setFolders] = useState([]);
@@ -43,6 +44,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
     if (isBookmarkPopupShowing && folders.length > 0)
       return (
         <div className={"bookmark-dropdown"}>
+            <div style={{borderBottom:'2px solid black'}}> 
           <input
             type="text"
             placeholder="Press enter to search"
@@ -52,14 +54,16 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
                 setSearchQuery(e.target.value);
               }
             }}
-            style={{ marginBottom: "10px", width: "100%" }}
+            style={{width: "85%", fontSize: '12.5px'}}
           />
+          <IoIosSearch size={20}/>
+          </div>
           {isBookmarkPopupShowing && folders.length > 0 ? <></> : <></>}
           <TreeView
             defaultCollapseIcon={<ExpandMoreIcon />}
             defaultExpandIcon={<ChevronRightIcon />}
           >
-            {searchQuery == "" ? (
+            {searchQuery === "" ? (
               <>
                 {folders.map((folder, i) =>
                   folder.name === "Parent" ? (
