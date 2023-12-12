@@ -8,6 +8,7 @@ Go to the root folder of the project
 - Application should open in a new window
 
 # To Run The Tests
+You need to first make sure the project is running locally on **"localhost:3000"** and the **local storage is clean**.
 For google chrome you need to add an extension named Selenium IDE.
 
 1. Click on the extension from the chrom toolbar
