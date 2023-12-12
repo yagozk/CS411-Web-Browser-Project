@@ -5,7 +5,8 @@ Go to the root folder of the project
 1. npm install
 2. npm run start
 3. npm run electron
-- Application should open in a new window
+
+Application should open in a new window
 
 # To Run The Tests
 You need to first make sure the project is running locally on **"localhost:3000"** and the **local storage is clean**.
