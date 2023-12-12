@@ -49,7 +49,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         if (!isBookmarkFound) {
             setIsBookmarked(false)
             setBookmarkName("")
-            setBookmarkFolder("Parent")
+            setBookmarkFolder("")
         }
         
     }, [value]);
@@ -82,8 +82,12 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
     }
     const handleAddBookmark = async () => {
         if (!bookmarkName || bookmarkName.trim() === "") return alert("Please enter a name for the bookmark")
-        if (isAddingFolder) {
-            if (!bookmarkFolder || bookmarkFolder.trim() === "") return alert("Please enter a name for the folder")
+        if (isAddingFolder && (!bookmarkFolder || bookmarkFolder.trim() === "")) {
+            return alert("Please enter a name for the folder")
+        } 
+        
+        if (!isAddingFolder && (!bookmarkFolder || bookmarkFolder.trim() === "")) {
+            return alert("Please choose a folder or add a new folder")
         }
 
         const res = localStorage.getItem("bookmarks")
@@ -150,7 +154,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         localStorage.setItem("bookmarks", JSON.stringify(folders))
         setBookmarkPopupShowing(false)
         setBookmarkName("")
-        setBookmarkFolder("Parent")
+        setBookmarkFolder("")
     }
 
     return (
