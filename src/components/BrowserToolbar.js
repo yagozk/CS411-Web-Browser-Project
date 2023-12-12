@@ -127,14 +127,6 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
                           }}
                         />
                       ))}
-                      {folder.bookmarks.length > 0 && // Check if there are bookmarks
-                      folder.bookmarks
-                        .filter((bookmark) =>
-                          bookmark.name.toLowerCase().includes(searchQuery.toLowerCase())
-                        )
-                        .length === 0 && ( // Check if the filtered array is empty
-                        <TreeItem nodeId="no-results" label="No results" />
-                      )}
                   </div>
                 ))}
               </>

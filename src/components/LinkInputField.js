@@ -12,7 +12,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
     const [bookmarkPopupShowing, setBookmarkPopupShowing] = useState(false);
 
     const [bookmarkName, setBookmarkName] = useState("");
-    const [bookmarkFolder, setBookmarkFolder] = useState("Parent");
+    const [bookmarkFolder, setBookmarkFolder] = useState("");
 
     const [isAddingFolder, setIsAddingFolder] = useState(false);
     const [isBookmarked, setIsBookmarked] = useState(false);
@@ -49,6 +49,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         if (!isBookmarkFound) {
             setIsBookmarked(false)
             setBookmarkName("")
+            setBookmarkFolder("Parent")
         }
         
     }, [value]);
@@ -181,7 +182,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
                                    endDecorator={<MdCancel size={20} onClick={() => setIsAddingFolder(false)}/>}
                             />
 
-                        ) : <Select id="FolderSelector" onChange={handleFolderChange} style={{marginTop: 10}} defaultValue={"Parent"}
+                        ) : <Select id="FolderSelector" onChange={handleFolderChange} style={{marginTop: 10}} value={bookmarkFolder}
                                     placeholder="Choose Folder...">
                             <Option id="AddFolder" value={"+"}> <IoIosAddCircle/> Add Folder... </Option>
                             {
