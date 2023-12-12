@@ -76,15 +76,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
 
 
     const handleFolderNameChange = (e, val) => {
-        console.log("hello")
-        if (e.target.value) {
-            console.log("hello2")
-            console.log(val)
-            console.log("hello3")
-            console.log(e.target.value)
             setBookmarkFolder(e.target.value)
-        }
-
     }
     const handleAddBookmark = async () => {
         if (!bookmarkName || bookmarkName.trim() === "") return alert("Please enter a name for the bookmark")
@@ -156,7 +148,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         localStorage.setItem("bookmarks", JSON.stringify(folders))
         setBookmarkPopupShowing(false)
         setBookmarkName("")
-        setBookmarkFolder("")
+        setBookmarkFolder("Parent")
     }
 
     return (
