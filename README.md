@@ -14,7 +14,7 @@ For google chrome you need to add an extension named Selenium IDE.
 1. Click on the extension from the chrom toolbar
 ![alt text](https://github.com/yagozk/CS411-Web-Browser-Project/blob/main/Step%201.png)
 
-2. The Selenium IDE will open. Choose Open existing project. You can find the tests in folder named **"tests"** under **src** and the selenium project is named **"CS411 Project 2"**
+2. The Selenium IDE will open. Choose Open existing project. You can find the tests in folder named **"tests"** and the selenium project is named **"CS411 Project 2"**
 ![alt text](https://github.com/yagozk/CS411-Web-Browser-Project/blob/main/Step%202.png)
 
 3. Then after the project is open. You will be able to see the tests as shown below. Click on the shown button in red to run all the tests.
