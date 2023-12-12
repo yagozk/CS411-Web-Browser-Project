@@ -49,7 +49,6 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         if (!isBookmarkFound) {
             setIsBookmarked(false)
             setBookmarkName("")
-            setBookmarkFolder("")
         }
         
     }, [value]);
@@ -92,7 +91,6 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         if (isAddingFolder) {
             if (!bookmarkFolder || bookmarkFolder.trim() === "") return alert("Please enter a name for the folder")
         }
-
 
         const res = localStorage.getItem("bookmarks")
         let folders = await JSON.parse(res)
@@ -157,6 +155,8 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
         setFolders(folders)
         localStorage.setItem("bookmarks", JSON.stringify(folders))
         setBookmarkPopupShowing(false)
+        setBookmarkName("")
+        setBookmarkFolder("")
     }
 
     return (
@@ -187,7 +187,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
                                    endDecorator={<MdCancel size={20} onClick={() => setIsAddingFolder(false)}/>}
                             />
 
-                        ) : <Select onChange={handleFolderChange} style={{marginTop: 10}} defaultValue={bookmarkFolder}
+                        ) : <Select onChange={handleFolderChange} style={{marginTop: 10}} defaultValue={"Parent"}
                                     placeholder="Choose Folder...">
                             <Option value={"+"}> <IoIosAddCircle/> Add Folder... </Option>
                             {
