@@ -1,0 +1,1337 @@
+{
+  "id": "c87afa12-9030-4488-add5-b08a2bb1ca02",
+  "version": "2.0",
+  "name": "CS411 Project 2",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "8f186868-0632-4d8c-8c2b-343e4adfcf88",
+    "name": "1. Adding a bookmark to the root directory",
+    "commands": [{
+      "id": "37851d4e-d26c-484f-8cde-a833ddb5682e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "698b8f1f-898c-42c6-a2b3-4bce3ccf8a79",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3835af4-ffce-43f0-b8ce-7dffbf6bc087",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e981cad6-8a3c-4a31-b9c3-7e0b8d876502",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test1"
+    }, {
+      "id": "387812a5-3f64-4b5b-a324-9d475ccf20b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton path",
+      "targets": [
+        ["css=#BookmarkManagementButton path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "83d86acc-b905-4b05-a0bd-3197744c0730",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e42f8f72-9b9d-42db-a6cd-1aef1d56dec0",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cedd42b-8cea-4ae9-85e6-8b53d32c07bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "testRoot"
+    }, {
+      "id": "1e0d3268-a93a-4fa7-bda8-b63f5dc6ea37",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "Choose Folder..."
+    }, {
+      "id": "373aa2d8-c27e-44bd-aaec-c4547f918d0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=FolderSelector",
+      "targets": [
+        ["id=FolderSelector", "id"],
+        ["css=#FolderSelector", "css:finder"],
+        ["xpath=//button[@id='FolderSelector']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Choose Folder...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c56b7cf-4c82-4883-9c91-8bcc725e49f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=Parent",
+      "targets": [
+        ["id=Parent", "id"],
+        ["css=#Parent", "css:finder"],
+        ["xpath=//li[@id='Parent']", "xpath:attributes"],
+        ["xpath=//ul[@id=':r1:']/li[2]", "xpath:idRelative"],
+        ["xpath=//li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Parent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64a01696-8159-49d0-a717-864a2f0ff53d",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba00727f-5437-4f4b-bd48-e712047da579",
+      "comment": "",
+      "command": "click",
+      "target": "id=HomePageButton",
+      "targets": [
+        ["id=HomePageButton", "id"],
+        ["css=#HomePageButton", "css:finder"],
+        ["xpath=//button[@id='HomePageButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "679f0d53-95fc-4d2a-ac57-ffe4e01394b7",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=URLAddressInput",
+      "targets": [],
+      "value": "http://localhost:3000/"
+    }, {
+      "id": "724e5731-18ec-48b4-a5d1-15551c8a1b75",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05d6857e-844d-4c96-aab4-cf3a7f8c9fdb",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test1"
+    }, {
+      "id": "c0654471-c31f-4b2c-8e37-f7ded9e35b12",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkManagementButton",
+      "targets": [
+        ["id=BookmarkManagementButton", "id"],
+        ["css=#BookmarkManagementButton", "css:finder"],
+        ["xpath=//button[@id='BookmarkManagementButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d304e9bb-044f-42b3-ba22-1051ec7d2d43",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "testRoot"
+    }, {
+      "id": "d61206ea-24fc-4714-8262-65003c00ccf6",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "Parent"
+    }]
+  }, {
+    "id": "18310d48-a6f4-43bc-b977-2bf5c35a98ad",
+    "name": "2. Adding bookmark to folder",
+    "commands": [{
+      "id": "a5068af4-c336-47db-879e-732ea3dd9e56",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b6d04bc-e6be-4a5d-bf82-f99f40b8b5e8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f77bce79-1702-41a4-a64e-0d9b339b93d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00ff0654-c4a2-4ad7-a914-52e40edfdb7e",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }, {
+      "id": "e0cc5a00-73e4-4fd7-9453-603db8bd5f7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "59d8e81c-c0e4-4377-9d3d-430101389d8b",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "181f0aaa-be83-43c7-80fb-7cb3f36f19c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "test2"
+    }, {
+      "id": "c5397725-2692-4b95-ab2a-3f2285a068d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=FolderSelector",
+      "targets": [
+        ["id=FolderSelector", "id"],
+        ["css=#FolderSelector", "css:finder"],
+        ["xpath=//button[@id='FolderSelector']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Parent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df3cf682-67f2-47e5-85ea-1b6a9d1b7ade",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddFolder",
+      "targets": [
+        ["id=AddFolder", "id"],
+        ["css=#AddFolder", "css:finder"],
+        ["xpath=//li[@id='AddFolder']", "xpath:attributes"],
+        ["xpath=//ul[@id=':r1:']/li", "xpath:idRelative"],
+        ["xpath=//li", "xpath:position"],
+        ["xpath=//li[contains(.,'Add Folder...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7af19ea-1975-4aa7-bded-b9eb227c6355",
+      "comment": "",
+      "command": "click",
+      "target": "id=FolderNameInput",
+      "targets": [
+        ["id=FolderNameInput", "id"],
+        ["css=#FolderNameInput", "css:finder"],
+        ["xpath=//input[@id='FolderNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9167a979-acf9-4a35-b586-a2373facc769",
+      "comment": "",
+      "command": "type",
+      "target": "id=FolderNameInput",
+      "targets": [
+        ["id=FolderNameInput", "id"],
+        ["css=#FolderNameInput", "css:finder"],
+        ["xpath=//input[@id='FolderNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "testFolder"
+    }, {
+      "id": "1d9fed41-f7a8-4d97-b263-2bf896eab5c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69d30ba2-c719-4f33-ad1f-ff8797b1e200",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-home",
+      "targets": [
+        ["css=.fa-home", "css:finder"],
+        ["xpath=//button[@id='HomePageButton']/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb9993b7-9db8-4342-90b0-9b2e94e0cfce",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=URLAddressInput",
+      "targets": [],
+      "value": "http://localhost:3000/"
+    }, {
+      "id": "29ede77d-a69a-439f-a3ec-8ae66b851025",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "id=BookmarkManagementButton",
+      "targets": [
+        ["id=BookmarkManagementButton", "id"],
+        ["css=#BookmarkManagementButton", "css:finder"],
+        ["xpath=//button[@id='BookmarkManagementButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dfb0035-a0e7-4f8b-b075-331da377d319",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "18b77ee1-53ce-4f2e-b1c5-615755f2b4ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkManagementButton",
+      "targets": [
+        ["id=BookmarkManagementButton", "id"],
+        ["css=#BookmarkManagementButton", "css:finder"],
+        ["xpath=//button[@id='BookmarkManagementButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f76e54f-d2d0-49fa-91f1-a10d353752e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92b1b3a4-730a-4609-a6fa-c62b3cb5caf6",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "Choose Folder..."
+    }, {
+      "id": "b2653ff8-3d1b-4296-95a0-60aa0205fb27",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1543d09c-0764-4109-aedc-2b76290162e0",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e50d7690-b848-4c52-8863-3d28c43f9ab4",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }, {
+      "id": "7299248a-e45a-42f8-9826-a9ee7dfc27ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb228637-c093-4aa4-9207-c30ac814d90c",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "test2"
+    }, {
+      "id": "b2098426-b53a-4133-9fc3-76f63c15ae6f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "testFolder"
+    }]
+  }, {
+    "id": "b6e3512c-6e85-4f70-87e5-425558446a7d",
+    "name": "3. Searching for bookmark",
+    "commands": [{
+      "id": "32f63fc3-b089-4a2d-b7fc-62c01e61e9da",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab8e0277-4411-45be-a5c5-1a77e153ee5c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c6816f3-1436-473d-a4ea-1568192fa5f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=BookMarkListingButton", "id"],
+        ["css=#BookMarkListingButton", "css:finder"],
+        ["xpath=//button[@id='BookMarkListingButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Bookmarks')]", "xpath:innerText"]
+      ],
+      "value": "http://localhost:3000/"
+    }, {
+      "id": "005417f0-3288-4603-842e-2ad05b8d2587",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookMarkListingButton",
+      "targets": [
+        ["id=BookMarkListingButton", "id"],
+        ["css=#BookMarkListingButton", "css:finder"],
+        ["xpath=//button[@id='BookMarkListingButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Bookmarks')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f1e5996-113a-4017-af24-a7c51e1f8f87",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookMarkSearchInput",
+      "targets": [
+        ["id=BookMarkSearchInput", "id"],
+        ["css=#BookMarkSearchInput", "css:finder"],
+        ["xpath=//input[@id='BookMarkSearchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e22b2adf-734d-44a2-ab40-3fb38f1d63ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=BookMarkSearchInput",
+      "targets": [
+        ["id=BookMarkSearchInput", "id"],
+        ["css=#BookMarkSearchInput", "css:finder"],
+        ["xpath=//input[@id='BookMarkSearchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "test2"
+    }, {
+      "id": "6e7b385b-aa6b-4bff-9fba-5fed61a9ca0a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=BookMarkSearchInput",
+      "targets": [
+        ["id=BookMarkSearchInput", "id"],
+        ["css=#BookMarkSearchInput", "css:finder"],
+        ["xpath=//input[@id='BookMarkSearchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e04a2a59-4578-4807-8c09-44022b90e0d4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[2]/li/div/div[2]",
+      "targets": [
+        ["css=.Mui-focused > .MuiTreeItem-label", "css:finder"],
+        ["xpath=//li[@id='test2']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/li/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4364a60-d220-4867-b91b-880eb77ee7b4",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=BookMarkListingButton", "id"],
+        ["css=#BookMarkListingButton", "css:finder"],
+        ["xpath=//button[@id='BookMarkListingButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Bookmarks')]", "xpath:innerText"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }]
+  }, {
+    "id": "f1a7bf08-5d3b-4c41-b7e1-0ffcc5c2d219",
+    "name": "4. Removing Bookmark",
+    "commands": [{
+      "id": "6b961eb8-69fa-4e5e-a1f2-0f41c4e9801e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cccee3f5-f258-4446-a23f-c456dc5106d7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "175e54f7-4c41-405b-9916-817f19f18f16",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8b46469-a285-4448-b03f-ab4f61b63b34",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test1"
+    }, {
+      "id": "9cb64196-49e7-41ba-a796-f71e95663d8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b5b4d72-40fc-48e2-91f0-aaa4e9d3f0f0",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "testRoot"
+    }, {
+      "id": "26ebcc1d-e3c5-4de1-93e2-b6069f1f55b3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "Parent"
+    }, {
+      "id": "92222ed2-eec4-4c0d-91db-05ec711253c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=RemoveBookmarkButton",
+      "targets": [
+        ["id=RemoveBookmarkButton", "id"],
+        ["css=#RemoveBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='RemoveBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8d4fed0-8cdd-4ec3-b769-892785406db4",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a933055-7e19-4708-a9ce-186aae911244",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=#BookmarkManagementButton path",
+      "targets": [
+        ["css=#BookmarkManagementButton path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c191b31a-253f-47b6-b380-f979ce2daef0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "66db7438-b256-4a19-8e13-ec93b8fe3dce",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c3d2351-cce0-48f0-a86f-524783b7fb9c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "Choose Folder..."
+    }]
+  }, {
+    "id": "0e3ce3fe-176f-4445-a330-cc9bb7dbf9b1",
+    "name": "5. Editing Bookmark Name",
+    "commands": [{
+      "id": "f1e1a9a0-ddff-4c0a-ad86-cfaef633f54c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "482878ce-6638-4aa0-b896-283187aaff18",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4770bb6-2a3d-42df-bfd4-de1130351e94",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2d3faad-a8b6-454a-8b5b-a75e33f30ddc",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }, {
+      "id": "045bbea1-cfd7-4b7a-a22b-e25ae9449eed",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkManagementButton",
+      "targets": [
+        ["id=BookmarkManagementButton", "id"],
+        ["css=#BookmarkManagementButton", "css:finder"],
+        ["xpath=//button[@id='BookmarkManagementButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9486a469-238e-4464-9aef-f83e5836b4ad",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "test2"
+    }, {
+      "id": "11a7c9d7-1d12-4fe7-827b-06efd8db274a",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98eee84f-2ebc-408d-8d06-85caae20b5ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "testEdit"
+    }, {
+      "id": "f279df5a-55dc-4720-8ae3-af9f17d7aa3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad0b330d-c386-490e-859c-ffb0f04b02e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=HomePageButton",
+      "targets": [
+        ["id=HomePageButton", "id"],
+        ["css=#HomePageButton", "css:finder"],
+        ["xpath=//button[@id='HomePageButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "880fca68-4f84-4a0d-becb-1523da3cc654",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=URLAddressInput",
+      "targets": [],
+      "value": "http://localhost:3000/"
+    }, {
+      "id": "f98c8d54-d890-4d8b-af71-4de316abd841",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af2650cf-d8f1-498c-83ee-d9256f077c7e",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }, {
+      "id": "f262c78e-143e-45e9-a5d0-03ce05125932",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkManagementButton",
+      "targets": [
+        ["id=BookmarkManagementButton", "id"],
+        ["css=#BookmarkManagementButton", "css:finder"],
+        ["xpath=//button[@id='BookmarkManagementButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e20d760-bb46-4d4a-87ee-7777b48942a6",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "testEdit"
+    }]
+  }, {
+    "id": "0d10e497-7869-4fba-af02-21c526ccca76",
+    "name": "6. Moving Bookmark From One Folder to Another",
+    "commands": [{
+      "id": "ca934d69-ff82-4560-b220-7924fe1ebf4a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70014afb-984d-4761-9db3-d2dac152dc32",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64d6eff4-82de-4947-bf17-877ae650491f",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "072ff0bb-9d20-440d-81d1-27a1573bf748",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }, {
+      "id": "53c2ba01-c5d9-431d-81f1-f7f6efa23f89",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkManagementButton",
+      "targets": [
+        ["id=BookmarkManagementButton", "id"],
+        ["css=#BookmarkManagementButton", "css:finder"],
+        ["xpath=//button[@id='BookmarkManagementButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85a0aed4-5b97-442d-b0c4-b693642271bd",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "testEdit"
+    }, {
+      "id": "5ecd0907-53ed-4f3b-81be-f51ed580d01f",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "testFolder"
+    }, {
+      "id": "8731a87a-6bf3-4caf-8657-a39d41055ebc",
+      "comment": "",
+      "command": "click",
+      "target": "id=FolderSelector",
+      "targets": [
+        ["id=FolderSelector", "id"],
+        ["css=#FolderSelector", "css:finder"],
+        ["xpath=//button[@id='FolderSelector']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'testFolder')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c312161-edcb-456d-a66b-9ad4a53ffa3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Parent",
+      "targets": [
+        ["id=Parent", "id"],
+        ["css=#Parent", "css:finder"],
+        ["xpath=//li[@id='Parent']", "xpath:attributes"],
+        ["xpath=//ul[@id=':r1:']/li[2]", "xpath:idRelative"],
+        ["xpath=//li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Parent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43026668-ceae-4982-91cb-a6301bf6e3a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab4d1324-894c-414a-8619-d279cce26462",
+      "comment": "",
+      "command": "click",
+      "target": "id=HomePageButton",
+      "targets": [
+        ["id=HomePageButton", "id"],
+        ["css=#HomePageButton", "css:finder"],
+        ["xpath=//button[@id='HomePageButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91e0ff79-ddad-413e-8ba1-7d2e0334536b",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=URLAddressInput",
+      "targets": [],
+      "value": "http://localhost:3000/"
+    }, {
+      "id": "720723bf-fd3f-48e7-8497-5645afa5f5f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2693955-a2a1-4935-b04d-5cbfaa29168b",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test2"
+    }, {
+      "id": "12349116-4e54-469f-abf9-559510a48d76",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton path",
+      "targets": [
+        ["css=#BookmarkManagementButton path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f183a43a-e26c-4906-a709-d99a9b15e55d",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=BookmarkNameInput",
+      "targets": [],
+      "value": "testEdit"
+    }, {
+      "id": "b8e2f1d2-fc76-4b06-bd74-bbd1dcbbf589",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=FolderSelector",
+      "targets": [],
+      "value": "Parent"
+    }]
+  }, {
+    "id": "6df1018a-3e19-457a-8d99-43566b24dd2b",
+    "name": "7. Add Bookmark without name",
+    "commands": [{
+      "id": "5a562588-4494-43ba-a720-8c42412b6274",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c13ba4f1-02ac-4a1c-9bfd-30c967e2d281",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "769fed18-4ae9-4bdc-a0f4-b1361af61c3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "234af5ef-fccf-4208-b6cb-82b417b32e39",
+      "comment": "",
+      "command": "type",
+      "target": "id=URLAddressInput",
+      "targets": [
+        ["id=URLAddressInput", "id"],
+        ["css=#URLAddressInput", "css:finder"],
+        ["xpath=//input[@id='URLAddressInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "http://localhost:3000/test3"
+    }, {
+      "id": "db749d6b-7ece-422b-a05a-4754ead9b7e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f851e958-7c38-4bec-97f9-58b2b42b8c1e",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "275374dc-b80b-4be0-8ccf-61c07ff551c3",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Please enter a name for the bookmark",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "70bd33f8-0362-48d5-b45f-03d9f04c2b53",
+    "name": "8. Add Bookmark without folder name",
+    "commands": [{
+      "id": "212f1905-4683-4158-91e2-1956d8976810",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a36f4a33-1459-411b-98fe-7257e2af7243",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "947426dc-ec7b-48a4-92a9-907c75673f68",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "36110128-2706-4456-81df-b0d8d642b5f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "907dd1b9-8dea-44b8-b61a-c8a6f97e041c",
+      "comment": "",
+      "command": "type",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "main"
+    }, {
+      "id": "fec55b76-cf42-407f-bb62-7c07edfbba80",
+      "comment": "",
+      "command": "click",
+      "target": "id=FolderSelector",
+      "targets": [
+        ["id=FolderSelector", "id"],
+        ["css=#FolderSelector", "css:finder"],
+        ["xpath=//button[@id='FolderSelector']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Choose Folder...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "046e342b-35b5-4f9f-a9e1-2f15e6d01603",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddFolder",
+      "targets": [
+        ["id=AddFolder", "id"],
+        ["css=#AddFolder", "css:finder"],
+        ["xpath=//li[@id='AddFolder']", "xpath:attributes"],
+        ["xpath=//ul[@id=':r1:']/li", "xpath:idRelative"],
+        ["xpath=//li", "xpath:position"],
+        ["xpath=//li[contains(.,'Add Folder...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "13085dbb-6146-469d-bbae-c854ee148753",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a14affa-ee7b-4b6e-8e1a-77bc2bb0ae18",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Please enter a name for the folder",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cadaf6dd-29c5-412f-b91f-ee150ea7fd74",
+    "name": "9. Add a Bookmark without choosing/adding a folder",
+    "commands": [{
+      "id": "8a0928c3-40b8-47ac-ba68-a05aff54b91f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e89ffb2-922b-4c7c-a3ff-2e209e39e80c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x945",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c14a33d-b811-4adb-bb0b-aae5f9d225e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#BookmarkManagementButton > svg",
+      "targets": [
+        ["css=#BookmarkManagementButton > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2e49901-d1ac-41d6-ac5a-83a14a5810a7",
+      "comment": "",
+      "command": "click",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a44568c9-e184-40df-ba93-72e7e599b8d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=BookmarkNameInput",
+      "targets": [
+        ["id=BookmarkNameInput", "id"],
+        ["css=#BookmarkNameInput", "css:finder"],
+        ["xpath=//input[@id='BookmarkNameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "sss"
+    }, {
+      "id": "c0f67c74-8021-4b34-ab17-addfd99551c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=AddBookmarkButton",
+      "targets": [
+        ["id=AddBookmarkButton", "id"],
+        ["css=#AddBookmarkButton", "css:finder"],
+        ["xpath=//button[@id='AddBookmarkButton']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-navbar-nav']/div/div[2]/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46ac72e5-75e1-4505-95e0-ab79a7ad2d63",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Please choose a folder or add a new folder",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3023cdbe-5f23-474d-9335-6645c2a16ee7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
