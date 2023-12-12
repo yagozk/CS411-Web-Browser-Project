@@ -57,6 +57,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
     useEffect(() => {
         localStorage.getItem("bookmarks") && setFolders(JSON.parse(localStorage.getItem("bookmarks")));
     }, []);
+
     const handleBookmark = () => {
         setBookmarkPopupShowing(!bookmarkPopupShowing);
         // onBookmark();
@@ -154,6 +155,7 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
     return (
         <div style={{width: "80%", display: "flex"}}>
             <input
+                id="URLAddressInput"
                 type="text"
                 className="form-control"
                 placeholder="Current Address"
@@ -164,33 +166,33 @@ const LinkInputField = ({value, onChange, folders, setFolders, ...rest}) => {
                 {...rest}
                 style={{display: "flex", alignItems: "center", borderRadius: "0px 0px 0px 0px"}}
             />
-            <button style={{}} className={"bookmark-button"} onClick={handleBookmark}>
+            <button id="BookmarkManagementButton" style={{}} className={"bookmark-button"} onClick={handleBookmark}>
                 {isBookmarked ? <FaBookmark/> : <FaRegBookmark/>}
             </button>
             {
                 bookmarkPopupShowing && (
                     <div className={"bookmark-popup"}>
                         Add to Bookmarks
-                        <Input placeholder="Name" variant="outlined" onChange={handleNameChange} style={{marginTop: 10}}
+                        <Input id="BookmarkNameInput" placeholder="Name" variant="outlined" onChange={handleNameChange} style={{marginTop: 10}}
                                value={bookmarkName}/>
                         {isAddingFolder ? (
-                            <Input placeholder="Folder name" variant="outlined" onChange={handleFolderNameChange}
+                            <Input id="FolderNameInput" placeholder="Folder name" variant="outlined" onChange={handleFolderNameChange}
                                    style={{marginTop: 10}}
                                    endDecorator={<MdCancel size={20} onClick={() => setIsAddingFolder(false)}/>}
                             />
 
-                        ) : <Select onChange={handleFolderChange} style={{marginTop: 10}} defaultValue={"Parent"}
+                        ) : <Select id="FolderSelector" onChange={handleFolderChange} style={{marginTop: 10}} defaultValue={"Parent"}
                                     placeholder="Choose Folder...">
-                            <Option value={"+"}> <IoIosAddCircle/> Add Folder... </Option>
+                            <Option id="AddFolder" value={"+"}> <IoIosAddCircle/> Add Folder... </Option>
                             {
                                 folders.map((folder) => {
-                                    return <Option value={folder.name}>{folder.name}</Option>
+                                    return <Option id={folder.name} value={folder.name}>{folder.name}</Option>
                                 })
                             }
                         </Select>}
                         <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginTop: 10}}>
-                            <Button variant="solid" style={{marginRight: 10}} onClick={handleAddBookmark}>Add</Button>
-                            {isBookmarked && <Button variant="outlined" onClick={handleRemoveBookmark}>Remove</Button>}
+                            <Button id="AddBookmarkButton" variant="solid" style={{marginRight: 10}} onClick={handleAddBookmark}>Add</Button>
+                            {isBookmarked && <Button id="RemoveBookmarkButton" variant="outlined" onClick={handleRemoveBookmark}>Remove</Button>}
                         </div>
                     </div>
                 )

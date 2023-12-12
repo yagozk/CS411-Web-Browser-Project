@@ -46,6 +46,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
         <div className={"bookmark-dropdown"}>
             <div style={{borderBottom:'2px solid black'}}> 
           <input
+            id="BookMarkSearchInput"
             type="text"
             placeholder="Press enter to search"
             defaultValue={searchQuery}
@@ -70,6 +71,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
                     <>
                       {folder.bookmarks.map((bookmark, j) => (
                         <TreeItem
+                          id={bookmark.name}
                           nodeId={bookmark.name}
                           label={bookmark.name}
                           onClick={() => {
@@ -83,7 +85,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
                     </>
                   ) : (
                     <>
-                      <TreeItem nodeId={i} label={folder.name}>
+                      <TreeItem id={folder.name} nodeId={i} label={folder.name}>
                         {folder.bookmarks.map((bookmark, j) => (
                           <TreeItem
                             nodeId={bookmark.name}
@@ -113,6 +115,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
                       )
                       .map((bookmark, j) => (
                         <TreeItem
+                          id={bookmark.name}
                           key={j}
                           nodeId={bookmark.name}
                           label={bookmark.name}
@@ -124,6 +127,14 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
                           }}
                         />
                       ))}
+                      {folder.bookmarks.length > 0 && // Check if there are bookmarks
+                      folder.bookmarks
+                        .filter((bookmark) =>
+                          bookmark.name.toLowerCase().includes(searchQuery.toLowerCase())
+                        )
+                        .length === 0 && ( // Check if the filtered array is empty
+                        <TreeItem nodeId="no-results" label="No results" />
+                      )}
                   </div>
                 ))}
               </>
@@ -211,6 +222,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
           </div>
           <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
             <div
+              id="HomePageButton"
               className="btn btn-outline-light me-2"
               style={{ fontSize: "18px" }}
               onClick={() => {
@@ -224,6 +236,7 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
 
           <div className="btn-group">
             <button
+              id="BookMarkListingButton"
               type="button"
               className="btn btn-outline-warning dropdown-toggle hoverable"
               onClick={() => setBookmarkPopupShowing(!isBookmarkPopupShowing)}
