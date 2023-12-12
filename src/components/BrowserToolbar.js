@@ -220,28 +220,35 @@ const BrowserToolbar = ({ onBookmarkClick, setBookmarkName }) => {
               folders={folders}
             />
           </div>
-          <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
-            <div
+          
+          <div className="btn-group"  style={{ marginLeft: "-80px" }}>
+            <button
               id="HomePageButton"
-              className="btn btn-outline-light me-2"
-              style={{ fontSize: "18px" }}
+              type="button"
+              className="btn btn-outline-light me-2 hoverable"
+           
               onClick={() => {
                 setCurrentAddress("http://localhost:3000/");
                 setBookmarkName("Homepage");
               }}
             >
-              <i class="fa fa-home"></i>
-            </div>{" "}
-          </Link>
+             
+              <i class="fa fa-home" style={{fontSize: "18px" }}></i>
+             
+            </button>
+   
+            </div>
 
           <div className="btn-group">
             <button
               id="BookMarkListingButton"
               type="button"
               className="btn btn-outline-warning dropdown-toggle hoverable"
+              
               onClick={() => setBookmarkPopupShowing(!isBookmarkPopupShowing)}
             >
-              <i className="fa fa-bookmark-o" style={{ fontSize: "24px" }}></i>
+              <strong>Bookmarks</strong>
+              <i className="fa fa-bookmark-o" style={{ marginLeft:"10px", fontSize: "18px" }}></i>
             </button>
             <BookmarkPopup />
           </div>
