@@ -1,6 +1,6 @@
 # Build instructions
-Prerequisite: You need to have npm installed on your device
-Go to the root folder of the project  
+Prerequisite: You need to have npm installed on your device.
+Go to the root folder of the project and open a terminal. 
 # Enter the following commands in the following order  
 1. npm install
 2. npm run start
